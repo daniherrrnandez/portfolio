@@ -1,4 +1,152 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    --background-color: #fffbd4;
+    --main-color: #0d0d0c;
+    --secondary-color: #b0b0b0;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--main-color);
+}
+
+header {
+    width: 60%;
+    margin: auto;
+
+    .nav {
+        display: flex;
+        margin: 3rem 0;
+        justify-content: space-around;
+        
+        li {
+            font-size: 1.5em;
+            list-style: none;
+            transition: translate 0.3s;
+        }
+        
+        li:hover {
+            font-weight: 500;
+            font-style: italic;
+            translate: 1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 0 0 0;
+    margin: 0 4rem;
+
+    .hero_name {
+        display: flex;
+        line-height: 0.75;
+        cursor: default;
+        
+        h1{
+            font-size: 7em;
+            transition: 0.2s;
+        }
+        
+        h1:hover {
+            color: var(--secondary-color);
+            translate: 0 -15px;
+            rotate: -5deg;
+            
+        }
+    }
+
+    .hero_surname {
+        display: flex;
+        cursor: default;
+
+        h1{
+            font-size: 7em;
+            transition: 0.15s;
+        }
+
+        h1:hover {
+            color: var(--secondary-color);
+            translate: 0 -10px;
+            rotate: -5deg;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 3.75em;
+        font-weight: 400;
+        transition: 0.3s;
+    }
+
+    h2:hover {
+        background-color: var(--main-color);
+        color: var(--background-color);
+    }
+
+    p {
+        margin: 1rem 5rem;
+        font-size: 1.5em;
+    }
+
+    img {
+        width: 50%;
+        justify-self: end;
+        align-self: center;
+    }
+}
+
+.work {
+    margin-top: 7rem;
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--main-color);
+    color: var(--background-color);
+    justify-content: center;
+    
+    h3 {
+        font-size: 5em;
+        font-style: italic;
+        transition: translate 0.3s;
+        margin-bottom: 2.5rem;
+        cursor: default;
+        grid-column: span 2;
+    }
+
+    h3:hover {
+        translate: 2rem;
+    }
+
+    ul {
+        width: 70%;
+    }
+    li {
+        padding: 1rem 0;
+        list-style: none;
+        font-size: 1.5rem;
+        border-top: 2px solid var(--background-color);
+    }
+
+    .project_details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .project_title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    img {
+        width: 70%;
+        height: auto;
+        justify-self: end;
+    }
 }
